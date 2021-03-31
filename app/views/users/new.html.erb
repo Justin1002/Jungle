@@ -2,8 +2,8 @@
 <div class="row">
 <div class="col-sm-5 col-md-offset-0">
   <%= form_for @user do |f| %>
-    
     <% if flash[:messages] %>
+    <% raise flash[:messages].inspect %>
       <% flash[:messages].each do |message| %>
         <div class="alert alert-danger" role="alert"><%= message %></div>
       <% end %>
