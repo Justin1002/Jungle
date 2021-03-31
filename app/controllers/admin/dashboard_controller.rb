@@ -8,4 +8,5 @@ class Admin::DashboardController < ApplicationController
     @categories_count = Category.all.count
     puts @categories_count
   end
+  
 end
