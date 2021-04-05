@@ -2,11 +2,6 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  def current_sale
-    @current_sale ||= Sale.where("sales.starts_on <= ? AND sales.ends_on >= ?",
-    Date.current, Date.current).map{|sale| {name: sale.name, discount: sale.percent_off} }
-  end
-  helper_method :current_sale
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -18,6 +13,11 @@ class ApplicationController < ActionController::Base
   end
   
   private
+
+  def current_sale
+    @current_sale ||= Sale.active.map{|sale| {name: sale.name, discount: sale.percent_off} }
+  end
+  helper_method :current_sale
 
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
