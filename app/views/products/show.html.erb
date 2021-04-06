@@ -26,6 +26,7 @@
       </div>
     </div>
   </article>
+  <% if @user %>
   <div class ="write review">
     <h2> Write a review </h1>
     <%= form_for [@product, @review] do |f| %>
@@ -53,9 +54,9 @@
       <%= f.submit 'Create Review', class: 'btn btn-primary' %>
     <% end %>
   </div>
+  <% end %>
   <h2>Product Reviews</h2>
   <div class = "row reviews">
-
     <% @product.reviews.reverse.each do |rev| %>
       <%= render 'review', rating: rev.rating, description: rev.description %>
     <% end %>
