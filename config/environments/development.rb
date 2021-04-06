@@ -40,4 +40,21 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.web_console.whitelisted_ips = ['10.0.2.0/24']
+
+  # config/environments/production.rb
+
+  config.action_mailer.delivery_method = :smtp
+  host = '0.0.0.0:3000'
+  config.action_mailer.default_url_options = { host:'0.0.0.0:3000', protocol: 'http' }
+
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => ENV['EMAIL_USER'],
+    :password             => ENV['EMAIL_PASS'],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
 end
