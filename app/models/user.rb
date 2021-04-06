@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   end
 
   has_secure_password
+  has_many :reviews
+  
   validates :password, length: {minimum: 5}
   validates :first_name, presence: true
   validates :last_name, presence: true
