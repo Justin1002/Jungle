@@ -1,6 +1,18 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails.
+
+# Additional Stretch features added:
+
+Product reviews and product ratings
+Visual sales cue in the form of an alert
+Order receipt email summary sent to customer after order
+
+# Future Implementations:
+
+Complete Sales Feature with working functionality for total cart value (currently just visual queue for sales)
+
+
 
 ## Additional Steps for Apple M1 Machines
 
