@@ -34,7 +34,7 @@
   </article>
   <% if @user %>
   <div class ="write review">
-    <h2> Write a review </h1>
+    <h2> Write a review </h2>
     <%= form_for [@product, @review] do |f| %>
       <div class="form-group">
       <% if f.object.errors.any? %>
@@ -62,6 +62,7 @@
   </div>
   <% end %>
   <h2>Product Reviews </h2>
+  <% if @product.reviews.any? %>
   <div class = "well row reviews">
     <table class="table table-sm">
       <thead>
@@ -77,6 +78,9 @@
     <% end %>
     </tbody>
     </table>
+  <% else %>
+  <p> There are no reviews for this product yet! </p>
+  <% end %>
   </div>
 
 </section>
