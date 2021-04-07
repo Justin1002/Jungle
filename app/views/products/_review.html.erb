@@ -1,11 +1,12 @@
 
-  <div class="review" >
-    <div class="col-sm-8">
-      <dt>Review Rating</dt>
-      <dd><%= rating %></dd>
-    </div>
-    <div class="col-sm-4">
-      <dt>Review Description</dt>
-      <dd><%= description %> </dd> 
-    </div>
-  </div>
+
+<tr>
+  <th scope="row"><%= user_id %></th>
+  <td> <% rating.times do |star| %>
+    ⭐
+    <% end %> </td>
+  <td> <%= description %>
+    <% if current_user && current_user.id == user_id %>
+    <td><%= link_to fa_icon("trash"), [@product, review], class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></td>
+   <% end %> </td>
+<tr>

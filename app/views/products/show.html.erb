@@ -55,11 +55,22 @@
     <% end %>
   </div>
   <% end %>
-  <h2>Product Reviews</h2>
-  <div class = "row reviews">
+  <h2>Product Reviews </h2>
+  <div class = "well row reviews">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col" class ='col-xs-1'>User ID</th>
+          <th scope="col"class ='col-xs-2'>Review Rating</th>
+          <th scope="col">Review Description</th>
+        </tr>
+      </thead>
+      <tbody>
     <% @product.reviews.reverse.each do |rev| %>
-      <%= render 'review', rating: rev.rating, description: rev.description %>
+      <%= render 'review', rating: rev.rating, description: rev.description, user_id: rev.user_id, review: rev %>
     <% end %>
+    </tbody>
+    </table>
   </div>
 
 </section>
