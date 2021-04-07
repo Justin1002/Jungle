@@ -22,6 +22,12 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= humanized_money_with_symbol @product.price %></dd>
+          <dt>Average Rating </dt>
+          <% if @product.reviews.average(:rating) == nil %>
+            <dd> There are no ratings for this product</dd>
+          <% else %>
+            <dd> <%= @product.reviews.average(:rating).round(2) %></dd>
+          <% end %>
         </dl>
       </div>
     </div>
