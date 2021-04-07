@@ -12,9 +12,9 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Additional Stretch features added:
 
-Product reviews and product ratings
-Visual sales cue in the form of an alert
-Order receipt email summary sent to customer after order
+1. Product reviews and product ratings
+2. Visual sales cue in the form of an alert
+3. Order receipt email summary sent to customer after order
 
 ## Future Implementations:
 
