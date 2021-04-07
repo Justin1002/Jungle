@@ -10,13 +10,13 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 !["photo of order summary"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(3).png?raw=true)
 !["photo of cart summary"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(4).png?raw=true)
 
-# Additional Stretch features added:
+## Additional Stretch features added:
 
 Product reviews and product ratings
 Visual sales cue in the form of an alert
 Order receipt email summary sent to customer after order
 
-# Future Implementations:
+## Future Implementations:
 
 Complete Sales Feature with working functionality for total cart value (currently just visual queue for sales)
 
