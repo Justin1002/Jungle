@@ -2,6 +2,14 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails.
 
+## Photos
+
+!["photo of app index"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle.png?raw=true)
+!["photo of product details"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(1).png?raw=true)
+!["photo of admin product details"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(2).png?raw=true)
+!["photo of order summary"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(3).png?raw=true)
+!["photo of cart summary"](https://github.com/Justin1002/Jungle/blob/master/docs/Screenshot_2021-04-06%20Jungle(4).png?raw=true)
+
 # Additional Stretch features added:
 
 Product reviews and product ratings
@@ -11,8 +19,6 @@ Order receipt email summary sent to customer after order
 # Future Implementations:
 
 Complete Sales Feature with working functionality for total cart value (currently just visual queue for sales)
-
-
 
 ## Additional Steps for Apple M1 Machines
 
@@ -27,10 +33,11 @@ Complete Sales Feature with working functionality for total cart value (currentl
 2. Create `config/database.yml` by copying `config/database.example.yml`
 3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
 4. Run `bin/rake db:reset` to create, load and seed db
-5. Create .env file based on .env.example
+5. Create .env file based on .env.example (username and password for admin portion of site, email and password of valid gmail account for order receipt feature)
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
+
 
 ## Stripe Testing
 
@@ -43,3 +50,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Rspec
+* Capybara
+* Database Cleaner
+* Poltergeist
