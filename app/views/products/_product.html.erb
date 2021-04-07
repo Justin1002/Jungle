@@ -18,7 +18,7 @@
       <p> <p>
       <% else %>
       <p> Average Rating:
-      <% product.reviews.average(:rating).to_i.times do |rating| %>
+      <% product.reviews.average(:rating).round(2).to_i.times do |rating| %>
         ⭐
       <% end %>
       <% end %>
